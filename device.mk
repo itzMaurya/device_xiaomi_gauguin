@@ -199,6 +199,10 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.display.mapper@4.0.vendor \
     vendor.qti.hardware.display.mapperextensions@1.1.vendor
 
+# POCKET MODE
+PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
+    ro.settings.pocket_judge=false    
+
 # DRM
 PRODUCT_PACKAGES += \
     android.hardware.drm@1.4-service.clearkey

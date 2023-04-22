@@ -17,6 +17,9 @@ $(call inherit-product, vendor/superior/config/common.mk)
 # Boot Animation
 TARGET_BOOT_ANIMATION_RES := 1080
 
+# Charging Animation
+TARGET_INCLUDE_PIXEL_CHARGER := true
+
 # Device identifier. This must come after all inclusions.
 PRODUCT_NAME := superior_gauguin
 PRODUCT_DEVICE := gauguin

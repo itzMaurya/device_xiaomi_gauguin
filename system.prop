@@ -31,8 +31,3 @@ persist.vendor.ssr.restart_level=ALL_ENABLE
 
 # Vendor
 ro.vendor.qti.va_aosp.support=1
-
-# Camera
-ro.miui.notch=1
-vendor.camera.aux.packagelist=org.lineageos.snap,com.android.camera
-persist.vendor.camera.privapp.list=com.android.camera

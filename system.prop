@@ -29,5 +29,8 @@ ro.vendor.radio.features_common=3
 persist.vendor.ssr.enable_ramdumps=1
 persist.vendor.ssr.restart_level=ALL_ENABLE
 
+#Radio
+persist.sys.radio.force_lte_ca=true
+
 # Vendor
 ro.vendor.qti.va_aosp.support=1

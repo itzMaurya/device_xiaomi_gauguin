@@ -141,12 +141,6 @@ vendor/lib64/hw/vendor.qti.hardware.btconfigstore@1.0-impl.so
 vendor/lib64/vendor.qti.hardware.bluetooth_sar@1.0.so
 vendor/lib64/vendor.qti.hardware.bluetooth_sar@1.1.so
 
-# Certificate Authority
-vendor/app/CACertService/CACertService.apk
-vendor/lib64/libcacertclient.so
-vendor/lib64/libjnihelper.so
-vendor/lib64/vendor.qti.hardware.cacert@1.0.so
-
 # Camera
 vendor/lib64/camera/com.qti.eeprom.gauguin_hi259_sunny_gt24p64e.so
 vendor/lib64/camera/com.qti.eeprom.gauguin_imx682_sunny_gt24p64e.so

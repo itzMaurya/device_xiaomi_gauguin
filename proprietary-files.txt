@@ -1,7 +1,6 @@
-# All unpinned blobs are extracted from V13.0.5.0.SJSCNXM.
+# All unpinned blobs are extracted from V14.0.2.0.SJSCNXM.
 
 # ACDB
-vendor/etc/acdbdata/adsp_avs_config.acdb
 vendor/etc/acdbdata/Forte/Forte_Bluetooth_cal.acdb
 vendor/etc/acdbdata/Forte/Forte_General_cal.acdb
 vendor/etc/acdbdata/Forte/Forte_Global_cal.acdb
@@ -18,9 +17,6 @@ vendor/etc/acdbdata/MTP/lito-lagoonmtp-snd-card/MTP_Lagoon_Hdmi_cal.acdb
 vendor/etc/acdbdata/MTP/lito-lagoonmtp-snd-card/MTP_Lagoon_Headset_cal.acdb
 vendor/etc/acdbdata/MTP/lito-lagoonmtp-snd-card/MTP_Lagoon_Speaker_cal.acdb
 vendor/etc/acdbdata/MTP/lito-lagoonmtp-snd-card/MTP_Lagoon_workspaceFile.qwsp
-vendor/etc/acdbdata/nn_ns_models/fai__2.0.0_0.1__3.0.0_0.0__eai_1.00.pmd
-vendor/etc/acdbdata/nn_ns_models/fai__2.2.0_0.1__3.0.0_0.0__eai_1.00.pmd
-vendor/etc/acdbdata/nn_vad_models/fai_3.0.0_0.0_eai_1.00.pmd
 vendor/etc/acdbdata/QRD/lito-lagoonqrd-snd-card/QRD_Lagoon_Bluetooth_cal.acdb
 vendor/etc/acdbdata/QRD/lito-lagoonqrd-snd-card/QRD_Lagoon_General_cal.acdb
 vendor/etc/acdbdata/QRD/lito-lagoonqrd-snd-card/QRD_Lagoon_Global_cal.acdb
@@ -29,6 +25,10 @@ vendor/etc/acdbdata/QRD/lito-lagoonqrd-snd-card/QRD_Lagoon_Hdmi_cal.acdb
 vendor/etc/acdbdata/QRD/lito-lagoonqrd-snd-card/QRD_Lagoon_Headset_cal.acdb
 vendor/etc/acdbdata/QRD/lito-lagoonqrd-snd-card/QRD_Lagoon_Speaker_cal.acdb
 vendor/etc/acdbdata/QRD/lito-lagoonqrd-snd-card/QRD_Lagoon_workspaceFile.qwsp
+vendor/etc/acdbdata/nn_ns_models/fai__2.0.0_0.1__3.0.0_0.0__eai_1.00.pmd
+vendor/etc/acdbdata/nn_ns_models/fai__2.2.0_0.1__3.0.0_0.0__eai_1.00.pmd
+vendor/etc/acdbdata/nn_vad_models/fai_3.0.0_0.0_eai_1.00.pmd
+vendor/etc/acdbdata/adsp_avs_config.acdb
 
 # ACDB Loader
 vendor/lib/libacdb-fts.so
@@ -53,9 +53,11 @@ vendor/lib64/libadsprpc.so
 vendor/lib64/libmdsprpc.so
 vendor/lib64/libsdsprpc.so
 
-# ADSP Modules
-vendor/lib/rfsa/adsp/capi_v2_aptX_CLHDAD_Speech_Decoder.so
+# ADSP modules
 vendor/lib/rfsa/adsp/capi_v2_aptX_CLHDADV_Encoder.so
+vendor/lib/rfsa/adsp/capi_v2_aptX_CLHDAD_Speech_Decoder.so
+vendor/lib/rfsa/adsp/libMIAIHDR_skel.so
+vendor/lib/rfsa/adsp/libSuperSensor_skel.so
 vendor/lib/rfsa/adsp/libapps_mem_heap.so
 vendor/lib/rfsa/adsp/libarc_hta_driver_skel.so
 vendor/lib/rfsa/adsp/libarcsoft_hdrplus_hvx_skel.so
@@ -64,13 +66,12 @@ vendor/lib/rfsa/adsp/libcalculator_domains_skel.so
 vendor/lib/rfsa/adsp/libcalculator_skel.so
 vendor/lib/rfsa/adsp/libcamera_nn_skel.so
 vendor/lib/rfsa/adsp/libcvpdsp_skel.so
-vendor/lib/rfsa/adsp/libdsp_streamer_binning.so
 vendor/lib/rfsa/adsp/libdspCV_skel.so
+vendor/lib/rfsa/adsp/libdsp_streamer_binning.so
 vendor/lib/rfsa/adsp/libfastcvadsp.so
 vendor/lib/rfsa/adsp/libfastcvdsp_skel.so
 vendor/lib/rfsa/adsp/libhexagon_nn_skel.so
 vendor/lib/rfsa/adsp/libhta_dsp_skel.so
-vendor/lib/rfsa/adsp/libMIAIHDR_skel.so
 vendor/lib/rfsa/adsp/libmialgo_rfs_cdsp_skel.so
 vendor/lib/rfsa/adsp/libscveObjectSegmentation_skel.so
 vendor/lib/rfsa/adsp/libscveT2T_skel.so
@@ -80,14 +81,13 @@ vendor/lib/rfsa/adsp/libsnpe_dsp_v65_domains_v2_skel.so
 vendor/lib/rfsa/adsp/libsnpe_dsp_v66_domains_v2_skel.so
 vendor/lib/rfsa/adsp/libsns_device_mode_skel.so
 vendor/lib/rfsa/adsp/libsns_low_lat_stream_skel.so
-vendor/lib/rfsa/adsp/libSuperSensor_skel.so
 vendor/lib/rfsa/adsp/misound_karaoke_res.bin
 vendor/lib/rfsa/adsp/misound_karaokemix_res.bin
 vendor/lib/rfsa/adsp/misound_res_headphone.bin
 vendor/lib/rfsa/adsp/misound_res_spk.bin
 
 # Alarm
--product/app/PowerOffAlarm/PowerOffAlarm.apk
+product/app/PowerOffAlarm/PowerOffAlarm.apk
 vendor/bin/hw/vendor.qti.hardware.alarm@1.0-service
 vendor/bin/power_off_alarm
 vendor/etc/init/vendor.qti.hardware.alarm@1.0-service.rc
@@ -1211,9 +1211,9 @@ vendor/lib64/vendor.qti.imsrtpservice@3.0-service-Impl.so
 vendor/lib64/vendor.qti.imsrtpservice@3.0.so
 
 
-# RIL (IMS) - from cupid-user-13-TKQ1.220630.001-V13.0.4.0.TLCMIXM-release-keys
--system_ext/app/ImsRcsService/ImsRcsService.apk|93877b05f97ce9691f344b50512461b67a981b95
-system_ext/framework/vendor.qti.ims.connection-V1.0-java.jar|e01800d96b0db524836856410d3dd0b9352ec46c
+# RIL (IMS)
+-system_ext/app/ImsRcsService/ImsRcsService.apk
+system_ext/framework/vendor.qti.ims.connection-V1.0-java.jar
 
 # Secure Element
 vendor/bin/hw/vendor.qti.secure_element@1.2-service
